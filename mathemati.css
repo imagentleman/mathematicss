@@ -31,7 +31,7 @@
 @media (min-width: 144.1rem) and (max-width: 192rem) { } /* 1441 - 1920px */
 
 /*XXLarge screens. Class "xxl-*/
-@media (min-width: 120.063em) { } /* 1921px and up */
+@media (min-width: 192.1rem) { } /* 1921px and up */
 
 /*Breakpoints based on foundation, which seem to be based on the most common display sizes*/
 /*http://foundation.zurb.com/docs/media-queries.html*/
