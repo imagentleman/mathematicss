@@ -1,5 +1,5 @@
 (function() {
-  var baseCSS = '*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing: border-box}.row:before,.row:after{display:table;content:" "}.row:after{clear:both}.row>*{float:left}';
+  var baseCSS = '*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing: border-box}.row:before,.row:after{display:table;content:" "}.row:after{clear:both}.row>*{float:left}html{font-size:10px}';
   var sCSS = '@media(max-width:64rem){';
   var mCSS = '@media(min-width:64.1em)and(max-width:102.4rem){';
   var lCSS = '@media(min-width:102.5rem)and(max-width:144rem){';
