@@ -4,7 +4,7 @@
   var mCSS = '@media(min-width:64.1em)and(max-width:102.4rem){';
   var lCSS = '@media(min-width:102.5rem)and(max-width:144rem){';
   var xlCSS = '@media(min-width:144.1rem)and(max-width:192rem){';
-  var xxlCSS = '@media (min-width:120.063em){';
+  var xxlCSS = '@media (min-width:192.1rem){';
   var mediaStyles = {s:[], m:[], l:[], xl:[], xxl:[]};
   var mediaCSS = {s:sCSS, m:mCSS, l:lCSS, xl:xlCSS, xxl:xxlCSS};
   var finalCSS = '';
