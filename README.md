@@ -3,6 +3,10 @@ mathematicss
 
 A CSS grid with variable columns in the form of a javascript library.
 
+### Demo
+
+Visit: [http://imagentleman.github.io/mathematicss/](http://imagentleman.github.io/mathematicss/)
+
 ### What is it?
 
 Mathematicss turns this:
