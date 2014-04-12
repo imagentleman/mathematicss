@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mathematicss - Example Grid</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,400' rel='stylesheet'>
+    <link rel="stylesheet" href="mathemati.css">
+    <style>
+      /*Mathematicss will create these classes on the fly*/
+      /*Just include the mathematicss.js file somewhere on the page.
+      The entire style will be included on the head with the
+      visible id="mathemusic-for-my-ears" (minified).
+      It will also be printed on the console.*/
+      /*When ready for production, just remove mathematicss.js script
+      tag and include the generated style.*/
+
+      .\31of1 {
+        width: 100%;
+      }
+
+      .\31 of2 {
+        width: 50%;
+      }
+
+      .\32 of3 {
+        width: calc(200%/3);
+      }
+
+      .\31 of3 {
+        width: calc(100%/3);
+      }
+
+      .\31 of4 {
+        width: calc(100%/4);
+      }
+    </style>
+</head>
+
+<body>
+
+<h1>Mathematicss</h1>
+
+<p>This is just an example of the working grid. Notice the lack of gutters or any other defaults. Mathematicss doesn't make assumptions about your layout and just takes care of the columns widths.</p>
+<p>To check a live demo look at the demo.html</p>
+
+<div class="container">
+  <div class="row">
+    <div class="1of1 otherclass s-1of1">.1of1</div>
+  </div>
+
+  <div class="row">
+    <div class="2of3 m-2of34 xl-3of45">.2of3</div>
+    <div class="1of3">.1of3</div>
+  </div>
+
+  <div class="row">
+    <div class="1of2">.1of2</div>
+
+    <div class="1of2">.1of2</div>
+  </div>
+
+  <div class="row">
+    <div class="1of3">.1of3</div>
+    <div class="1of3">.1of3</div>
+    <div class="1of3">.1of3</div>
+  </div>
+
+  <div class="row">
+    <div class="1of4">.1of4</div>
+    <div class="1of4">.1of4</div>
+    <div class="1of4">.1of4</div>
+    <div class="1of4">.1of4</div>
+  </div>
+</div>

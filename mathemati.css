@@ -1,0 +1,144 @@
+/*This is the base CSS with a barebones grid system*/
+
+.row:before,
+.row:after {
+    display: table;
+    content: " ";
+}
+
+.row:after {
+    clear: both;
+}
+
+/*Based on Nicolas Gallagher clearfix*/
+/*But disregarding the edge case fixes for IE6-7*/
+/*http://nicolasgallagher.com/micro-clearfix-hack/*/
+
+
+@media {} /* Default styles or whatever (not necessarily mobile) first */
+/*There is no need to put anything in here necessarily...*/
+
+/*Small screens. Classes prepended with "s-" are put in here. All classes use a t-shirt like notation.*/
+@media (max-width: 64rem) { } /* 0 - 640px */
+
+/*Medium screens. Class "m-"*/
+@media (min-width: 64.1em) and (max-width: 102.4rem) { } /* 641 - 1024px */
+
+/*Large screens. Class "l-"*/
+@media (min-width: 102.5rem) and (max-width: 144rem) { } /* 1025 - 1440px */
+
+/*XLarge screens. Class "xl-"*/
+@media (min-width: 144.1rem) and (max-width: 192rem) { } /* 1441 - 1920px */
+
+/*XXLarge screens. Class "xxl-*/
+@media (min-width: 120.063em) { } /* 1921px and up */
+
+/*Breakpoints based on foundation, which seem to be based on the most common display sizes*/
+/*http://foundation.zurb.com/docs/media-queries.html*/
+
+/*Sizes on rem, and the default font size is reset to 10px to make calculations easier*/
+/*But restricted into ranges instead of allowing "this size up" media queries
+(with only min-width) rules which implies mobile first. This is intended to support
+"whatever first". It might require repetition of rules if indeed, they apply from one
+breakpoint up but makes everything simpler to reason about (one media query applies
+to one target device size only, and you code one media query or device, complete it,
+move to the next, and so on, one by one).*/
+
+
+.row > * {
+	float: left;
+}
+
+/*This keeps the columns aligned horizontally.
+The parent child selector (>) doesn't work on IE6 but allows column-less markup.
+Everything inside a row is assumed as a column, and no "column" or "col" class is needed
+for each column element. It also saves us from putting the float rule in every
+column width class.*/
+/*Even on stacked mobile first layouts, columns are floated and rows are needed.
+Unlike most other grids (bootstrap, Adam Kaplan's grid, etc), we use only one
+unified way of laying out the markup, instead of mobile vs large screen.*/
+/*http://getbootstrap.com/*/
+/*http://www.adamkaplan.me/grid/*/
+
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*Microsoft was right all along...*/
+
+
+/*That's it. We allow variable column widths in the following way:
+
+You add a class with a name spelling the fraction.
+For example, if you write:
+
+<div class='1of3'></div>
+
+Mathematicss will create a class 1of3, with a width of 1/3.
+This way you can use percentages (like 50/100, which are easy to understand)
+and define very fine grained sizes (1/37). The units will be percentages
+(%), so things will be responsive in most cases. And the fractions don't need
+common denominators (1of2 can be next to a 10of36).*/
+
+/*Wait, are those names valid? In HTML5 yes, in CSS you can't start a class
+name with a number, but we escape them for you, so they are technically valid.*/
+/*http://mathiasbynens.be/notes/css-escapes*/
+
+/*You can prepend a class with one of the assigned media query classes
+and put the rule only in that media query.
+
+So, for example:
+
+<div class='s-1of2'></div>
+
+Will create this:
+
+@media (max-width: 64rem) { This corresponds to the small size breakpoint
+	s-1of2 {
+		width: 50%;
+	}
+} */
+
+
+/*Styles for the example page (index.html)*/
+
+html {
+	font-size: 10px;
+	font-family: 'Raleway', 'Inconsolata', sans-serif;
+	text-align: center;
+}
+
+body {
+	max-width: 738px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 5.5rem;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 1rem;
+}
+
+p {
+	font-size: 2.2rem;
+	line-height: 1.8;
+}
+
+.container {
+	background: #f0318b;
+	color: #fff;
+	margin: 0 auto;
+	border: 3px solid rgba(255,255,255,0.2);
+	margin-top: 5rem;
+}
+
+.row div {
+	border: 2px solid rgba(255,255,255,0.2);
+	font-size: 1.8rem;
+	padding: 2rem;
+	display: block;
+}
