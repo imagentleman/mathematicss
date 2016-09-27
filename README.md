@@ -3,6 +3,8 @@ mathematicss
 
 A CSS grid with variable columns in the form of a javascript library.
 
+730 bytes gzipped (2.54kb without minification or compression).
+
 ### Demo
 
 Visit: [http://imagentleman.github.io/mathematicss/](http://imagentleman.github.io/mathematicss/)
